@@ -41,7 +41,7 @@ npm run start:build --socketCount 5
 ```
 ## Implementation details
 
-The server will send a predetermined amount of messages to each open connections at a set interval, and then it will close that connection. As this happens, the clients will keep sending messages for as long as the connection remains open. Once all connections have been closed, the application will exit.
+The server will send a predetermined amount of messages to each open connections at a random interval, and then it will close that connection. As this happens, the clients will keep sending messages for as long as the connection remains open. Once all connections have been closed, the application will exit.
 
 > **n.b.** The connection number on the client and the server will not necessarily match, the server keeps track of the total amount of connections it has received since startup, the client assigns connection numbers as it creates it. **This number is irrelevant and only serves for demonstration purposes**. If the client application is started multiple times after the server has been started, the numbers won't match.
 
