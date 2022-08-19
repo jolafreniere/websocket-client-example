@@ -11,7 +11,7 @@ ws.on('message', function message(data) {
 
 async function doStuff(){
     while(true){
-        await new Promise(resolve => setTimeout(resolve, 3000));
+        await new Promise(resolve => setTimeout(resolve, 2000));
         ws.send("CLIENT MESSAGE: "+new Date().toISOString());
     }
 }
